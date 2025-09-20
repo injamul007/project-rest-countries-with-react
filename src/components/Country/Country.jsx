@@ -18,8 +18,6 @@ const Country = ({country}) => {
       <h3>Official: {country.name.official}</h3>
       <h3>Capital City: {country.capital.capital[0]? country.capital.capital[0] : 'No Capital'}</h3>
       <p>Area: {country.area.area} - {country.area.area>300000? "Big Country":"Small Country"}</p>
-      <p>CCN3 Code: {country.ccn3.ccn3}</p>
-      <p>CCA3 Code: {country.cca3.cca3}</p>
       <p>Region: {country.region.region}</p>
       {
         currencies.map(currency=> <Currency key={currency[1].name} currency={currency}></Currency>)
