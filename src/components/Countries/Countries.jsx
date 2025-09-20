@@ -7,7 +7,7 @@ const Countries = ({countriesPromise}) => {
   const {countries} = countriesData
   return (
     <div>
-      <h2>In the Countries: {countries.length}</h2>
+      <h2 style={{textAlign:'center'}}>In the Countries: {countries.length}</h2>
       <div className='countries'>
       {
         countries.map(country=> <Country key={country.cca3.cca3} 
