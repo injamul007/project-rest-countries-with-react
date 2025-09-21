@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Currency from '../Currency/Currency';
 import "./Country.css"
 
-const Country = ({country, handleVisitedCountries}) => {
+const Country = ({country, handleVisitedCountries, handleVisitedFlags}) => {
   const [isVisited, setIsVisited] = useState(false)
 
   const handleState = () => {
@@ -25,7 +25,8 @@ const Country = ({country, handleVisitedCountries}) => {
       }
       <p>Population: {country.population.population}</p>
       <p>Continents: {country.continents.continents[0]}</p>
-      <button onClick={handleState}>{isVisited? 'Visited':'Not Visited'}</button>
+      <button style={{marginRight:'20px'}} onClick={handleState}>{isVisited? 'Visited':'Not Visited'}</button>
+      <button onClick={()=>handleVisitedFlags(country?.flags?.flags?.png)}>Add Visited Flag</button>
     </div>
   );
 };

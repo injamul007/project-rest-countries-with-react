@@ -1,5 +1,17 @@
 .countries {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+.visited_flag_container img {
+  width: 120px;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  .countries {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
 }
