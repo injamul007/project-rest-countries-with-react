@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import Currency from '../Currency/Currency';
 import "./Country.css"
 
-const Country = ({country}) => {
+const Country = ({country, handleVisitedCountries}) => {
   const [isVisited, setIsVisited] = useState(false)
 
   const handleState = () => {
     setIsVisited(!isVisited)
+    handleVisitedCountries(country)
   }
   // console.log(country)
   const currenciesObj = country.currencies.currencies;
